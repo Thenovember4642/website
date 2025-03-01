@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <link rel="icon" type="image/png" href="Images/Icon.png">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <a href="index.html">
+        <img src="Images/BOOKSHOCK update.png" alt="Go to the main site">
+      </a>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search..." id="searchInput">
+        <button class="search-button" onclick="searchFunction()">Search</button>
+    </div>
+
+    <script>
+        // JavaScript function for the search button (You can customize this as needed)
+        function searchFunction() {
+            var searchQuery = document.getElementById('searchInput').value;
+            alert("You searched for: " + searchQuery);
+            // Here you can link the search query to a real search engine or backend process
+        }
+    </script>
+
+</body>
+</html>

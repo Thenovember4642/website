@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flash with Ruffle</title>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+  <h1>Running Flash content with Ruffle</h1>
+  <div id="ruffle-container">
+    <!-- Flash content will be embedded here -->
+    <object id="flash-object" type="application/x-shockwave-flash" data="File downloads/Quest for bacon.swf">
+      <param name="movie" value="Quest for bacon.swf" />
+    </object>
+  </div>
+  <script>
+    // Initialize Ruffle to handle the Flash object
+    const ruffle = RufflePlayer.newest();
+    const container = document.getElementById("ruffle-container");
+    const flashObject = document.getElementById("flash-object");
+
+    ruffle.load(flashObject, container);
+  </script>
+</body>
+</html>

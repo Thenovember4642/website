@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKSHOCK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Images/Icon.png">
+    <body style="background-color: rgb(145, 145, 145);">
+</head>
+    
+
+<a href="index.html">
+    <img src="Images/BOOKSHOCK update.png" alt="Go to the main site">
+  </a>
+<h1 style="text-align: center;">Welcome to Thenovember's website</h3> 
+<h1 style="text-align: center;">click the options below</h1>
+<a href="Forum.html">Free forum test</a>
+<a href="About.html">Second page</a>
+<a href="Download.html">Download stuff</a>
+<a href="Register.html">Register</a>
+<a href="news.html">NEWS</a>
+<a href="flash.html">Play classic flash games!</a>
+<label class="switch">
+    <input type="checkbox" id="mode-switch" />
+    <span class="slider round"></span>
+  </label>
+  
+  <script>
+    const modeSwitch = document.getElementById('mode-switch');
+  
+    modeSwitch.addEventListener('change', () => {
+      if (modeSwitch.checked) {
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+        document.body.classList.add('light-mode');
+      }
+    });
+  </script>
+   <marquee behavior="scroll" direction="left" scrollamount="10">
+    Bookshock©
+    </marquee>
+  
+  <!-- CSS for Light Mode -->
+  <style>
+    .light-mode {
+      background-color: #f0f0f0;
+      color: #000000;
+    }
+  </style>
+  
+  <!-- CSS for Dark Mode -->
+  <style>
+    .dark-mode {
+      background-color: #000000;
+      color: #f0f0f0;
+    }
+  </style>
+
+
+
+</html>
+
+
+
+
+
+
+
+

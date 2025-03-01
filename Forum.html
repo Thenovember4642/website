@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <body style="background-color: rgb(145, 145, 145);"></body>
+    <link rel="icon" type="image/png" href="Images/Icon.png">
+    <style>
+        
+        
+        
+
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .forum {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .post {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+        .new-post {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html">
+        <img src="Images/Bookshock Forum.png" alt="Go to the main site">
+      </a>
+
+
+
+    <div class="forum">
+        <h1>Welcome to the Forum</h1>
+        <p>This is the forum (WIP) where you could post where a lot of people around the world could see! note that your post wont be saved</p>
+        <!-- New Post Form -->
+        <div class="new-post">
+            <h2>Create a Post</h2>
+            <form id="postForm">
+                <input type="text" id="username" placeholder="Your Name" required><br><br>
+                <textarea id="content" placeholder="Write your post..." required></textarea><br><br>
+                <button type="submit">Post</button>
+            </form>
+        </div>
+
+        <!-- Posts -->
+        <div id="posts">
+            <!-- Posts will be dynamically added here -->
+             
+        </div>
+    </div>
+    <p>Bookshock©</p>
+    <script>
+        // JavaScript for dynamic interaction
+        const postForm = document.getElementById('postForm');
+        const posts = document.getElementById('posts');
+
+        postForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get input values
+            const username = document.getElementById('username').value;
+            const content = document.getElementById('content').value;
+
+            // Create new post element
+            const postDiv = document.createElement('div');
+            postDiv.classList.add('post');
+            postDiv.innerHTML = `<h3>${username}</h3><p>${content}</p>`;
+
+            // Add post to the posts section
+            posts.prepend(postDiv);
+
+            // Clear the form
+            postForm.reset();
+        });
+       
+        
+   
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    </script>
+</body>
+</html>
